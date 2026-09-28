@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "AVEX - WhatsApp al Gestor",
+  "version": "1.2.1",
+  "description": "Envía temporalmente mensajes y adjuntos cargados de WhatsApp Web al resumen diario de AVEX.",
+  "minimum_chrome_version": "114",
+  "permissions": [
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://web.whatsapp.com/*",
+    "https://gestortareasavex.site.je/*"
+  ],
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "action": {
+    "default_title": "AVEX - WhatsApp al Gestor"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://web.whatsapp.com/*"
+      ],
+      "js": [
+        "whatsapp.js"
+      ],
+      "css": [
+        "whatsapp.css"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://gestortareasavex.site.je/*"
+      ],
+      "js": [
+        "importador.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

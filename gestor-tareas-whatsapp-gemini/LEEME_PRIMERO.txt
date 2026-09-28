@@ -1,0 +1,28 @@
+GESTOR AVEX + RESUMEN DE WHATSAPP
+
+ORDEN DE INSTALACIÓN
+
+1. Crear una API Key en https://aistudio.google.com/apikey
+2. Pegar la clave en htdocs/config/gemini.php
+3. Importar instalacion_resumen_whatsapp.sql desde phpMyAdmin
+4. Subir el contenido de htdocs/ a la carpeta htdocs de InfinityFree
+5. Instalar extension-chrome/ desde chrome://extensions
+6. Iniciar sesión en el gestor como Valentina Loza
+7. Abrir WhatsApp Web y usar “Enviar chat al gestor”
+8. La extensión detectará automáticamente las imágenes y PDF cargados en el chat
+
+Leé GUIA_INSTALACION_RESUMEN_WHATSAPP.md para ver las instrucciones completas.
+
+IMPORTANTE
+
+- No subas extension-chrome/ al hosting.
+- No coloques la API Key dentro de la extensión.
+- La extensión no envía mensajes ni lee llamadas o audios.
+- Las imágenes y PDF cargados en el chat se detectan automáticamente y se envían a Gemini, pero no quedan guardados en el gestor.
+- Los adjuntos se interpretan como evidencia silenciosa: el resumen no muestra nombres de archivos ni una lista de adjuntos.
+- El resumen identifica solo a autores que realmente escribieron en el chat; las personas mencionadas en mensajes o documentos no se agregan como participantes.
+- Los resúmenes diarios pegados en WhatsApp se ignoran para no duplicar tareas anteriores.
+- El resultado usa un formato compacto: conversaciones clave con participantes y una única lista de acciones pendientes.
+- Cada resumen guardado se puede editar o eliminar desde la pantalla Resumen diario.
+- El panel de la extensión se puede mover, minimizar y recuerda su posición en WhatsApp Web.
+- Revisá los mensajes antes de presionar “Generar resumen con Gemini”.

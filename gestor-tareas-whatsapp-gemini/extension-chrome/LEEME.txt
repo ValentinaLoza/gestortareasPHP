@@ -1,0 +1,21 @@
+AVEX - WhatsApp al Gestor
+
+1. No subas esta carpeta a htdocs.
+2. Abrí chrome://extensions.
+3. Activá Modo de desarrollador.
+4. Elegí Cargar extensión sin empaquetar.
+5. Seleccioná esta carpeta completa.
+6. Recargá WhatsApp Web.
+
+La extensión toma automáticamente los mensajes, autores, imágenes y PDF que
+WhatsApp Web tenga cargados en el chat. Los adjuntos permanecen solo en memoria
+hasta enviarse a Gemini; el gestor guarda únicamente el resumen textual.
+
+El panel verde se puede arrastrar desde el encabezado “Resumen AVEX”. Usá el
+botón − para reducirlo a un ícono pequeño y tocá 📋 para volver a abrirlo. La
+extensión recuerda su posición y si quedó minimizado.
+
+La API Key de Gemini se configura en el archivo config/gemini.php del gestor,
+nunca dentro de esta extensión.
+
+Consultá la guía principal incluida junto al ZIP para ver todos los pasos.

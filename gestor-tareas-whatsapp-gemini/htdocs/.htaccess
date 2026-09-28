@@ -1,0 +1,12 @@
+Options -Indexes
+
+RewriteEngine On
+RewriteRule ^config/ - [F,L]
+
+<FilesMatch "\.(zip|rar|7z|sql|bak|env|log)$">
+    Require all denied
+</FilesMatch>
+
+<FilesMatch "^(crear_usuario_temporal|reset_password_temporal|generar_hash|crear_admin|phpinfo|info|test)\.php$">
+    Require all denied
+</FilesMatch>

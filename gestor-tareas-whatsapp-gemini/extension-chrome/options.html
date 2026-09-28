@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AVEX - Configuración</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      background: #f1f5f9;
+      color: #1f2937;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 28px;
+      border-radius: 16px;
+      background: #ffffff;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1);
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    label {
+      display: block;
+      margin: 22px 0 8px;
+      font-weight: 700;
+    }
+
+    input {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      font: inherit;
+    }
+
+    button {
+      margin-top: 16px;
+      border: 0;
+      border-radius: 10px;
+      padding: 11px 18px;
+      background: #16a34a;
+      color: #ffffff;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    #estado {
+      display: inline-block;
+      margin-left: 12px;
+      color: #15803d;
+      font-weight: 700;
+    }
+
+    .nota {
+      margin-top: 24px;
+      padding: 14px;
+      border-radius: 10px;
+      background: #eff6ff;
+      color: #1d4ed8;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>AVEX - WhatsApp al Gestor</h1>
+    <p>Esta extensión solo lee el chat cuando presionás “Enviar chat al gestor”.</p>
+
+    <label for="gestorUrl">Dirección del gestor</label>
+    <input
+      type="url"
+      id="gestorUrl"
+      value="https://gestortareasavex.site.je"
+      required
+    >
+
+    <button type="button" id="guardar">Guardar</button>
+    <span id="estado" aria-live="polite"></span>
+
+    <div class="nota">
+      La API Key de Gemini no se configura aquí. Debe permanecer guardada únicamente en el archivo <strong>config/gemini.php</strong> del servidor.
+    </div>
+  </main>
+
+  <script src="options.js"></script>
+</body>
+</html>
